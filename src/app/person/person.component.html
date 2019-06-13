@@ -1,7 +1,11 @@
+<form>
 <div class="form-group">
-Search:<input type="text" placeholder="Search For your Favorate character" [(ngModel)]="SearchText"/>
+  <div>
+    <label>Search:</label>
+<input class="form-control" type="text" placeholder="Search For your Favorate character" [(ngModel)]="SearchText"/>
 <h3>List of the Game of Throne Characters</h3>
-<table >
+</div>
+<table class="table table-striped" >
   <thead></thead>
   <tr>
     <th>Frist Name</th>
@@ -15,5 +19,5 @@ Search:<input type="text" placeholder="Search For your Favorate character" [(ngM
           </tr>
   </tbody>
   </table>
-
   </div>
+</form>

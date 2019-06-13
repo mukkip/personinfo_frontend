@@ -16,7 +16,6 @@ export class FilterPipe implements PipeTransform {
     searchText = searchText.toLocaleLowerCase();
 
     return persons.filter(person => {
-      console.log(person);
      return (person.firstName.toLocaleLowerCase().indexOf(searchText)!==-1 || person.lastName.toLocaleLowerCase().indexOf(searchText)!==-1 );
     });
   }
