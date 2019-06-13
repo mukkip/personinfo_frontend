@@ -9,6 +9,7 @@ import { HttpClientService } from '../service/http-client.service';
 export class PersonComponent implements OnInit {
 
   persons : string[];
+  SearchText:string;
   constructor(
     private httpClientService:HttpClientService
   ) { }

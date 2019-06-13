@@ -3,8 +3,8 @@ import { HttpClient } from '@angular/common/http';
 
 export class Person{
   constructor(
-    public FirstName:string,
-    public SecondName:string,
+    public firstName:string,
+    public lastName:string,
   ) {}
 }
 
@@ -18,7 +18,7 @@ export class HttpClientService {
 
   getPersons()
   {
-    console.log("test call");
+  
     return this.httpClient.get<Person[]>('https://cors.io/?https://personinfo.herokuapp.com/');
   }
 }

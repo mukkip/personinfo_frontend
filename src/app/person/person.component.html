@@ -1,4 +1,7 @@
-<table border="1">
+<div class="form-group">
+Search:<input type="text" placeholder="Search Persons" [(ngModel)]="SearchText"/>{{SearchText}}
+<h3>List of the Persons</h3>
+<table >
   <thead></thead>
   <tr>
     <th>Frist Name</th>
@@ -6,9 +9,11 @@
     </tr>
   
   <tbody>
-      <tr *ngFor="let person of persons">
+      <tr *ngFor="let person of persons | filter:SearchText">
           <td>{{person.firstName}}</td>
           <td>{{person.lastName}}</td>
           </tr>
   </tbody>
     </table>
+
+  </div>
