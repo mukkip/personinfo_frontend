@@ -19,6 +19,6 @@ export class HttpClientService {
   getPersons()
   {
     console.log("test call");
-    return this.httpClient.get<Person[]>('https://personinfo.herokuapp.com/');
+    return this.httpClient.get<Person[]>('https://cors.io/?https://personinfo.herokuapp.com/');
   }
 }
