@@ -1,10 +1,11 @@
-<form>
 <div class="form-group">
-  <div>
-    <label>Search:</label>
-<input class="form-control" type="text" placeholder="Search For your Favorate character" [(ngModel)]="SearchText"/>
-<h3>List of the Game of Throne Characters</h3>
+  <div class="form-group row">
+    <h2 class="col-sm-8 ">List of the Game of Throne Characters</h2>
+    <div class="col-sm-4">
+<input  class="form-control" type="text" placeholder="Search For your Favorate character" [(ngModel)]="SearchText"/>
 </div>
+</div>
+
 <table class="table table-striped" >
   <thead></thead>
   <tr>
@@ -13,6 +14,10 @@
     </tr>
   
   <tbody>
+      <div class="d-flex align-items-center"  *ngIf ="loading">
+          <strong>Loading...</strong>
+          <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
+        </div>
       <tr *ngFor="let person of persons | filter:SearchText">
           <td>{{person.firstName}}</td>
           <td>{{person.lastName}}</td>
@@ -20,4 +25,3 @@
   </tbody>
   </table>
   </div>
-</form>

@@ -10,6 +10,7 @@ export class PersonComponent implements OnInit {
 
   persons : string[];
   SearchText:string;
+  loading:boolean=true;
   constructor(
     private httpClientService:HttpClientService
   ) { }
@@ -23,7 +24,8 @@ export class PersonComponent implements OnInit {
 handleSuccessfulResponse(response)
 {
     this.persons=response;
-    console.log(this.persons);
+    this.loading = false;
+  
 }
 
  
